@@ -38,6 +38,16 @@ post '/names' do
 end
 
 get '/calculator' do
-	"test"
+	firstname = params[:firstname]
+	lastname = params[:lastname]
+	erb :calculator, locals:{firstname:firstname, lastname:lastname}
+end
 
+post '/math_problem' do
+	function = params[:function]
+	firstname = params[:firstname]
+	lastname = params[:lastname]
+	num1 = params[:num1]
+	num2 = params[:num2]
+	answer = math(function,num1,num2)
 end

@@ -1,0 +1,18 @@
+<center><h1>please select what you want to calculate, <%=firstname%> </h1></center>
+
+<form method = "post" action = "math_problem">
+
+<center>
+	<input type = "number" name = "num1"><br>
+	<input type = "radio" name = "function" value ="+" checked>+<br>
+	<input type = "radio" name = "function" value ="-">-<br>
+	<input type = "radio" name = "function" value ="*">*<br>
+	<input type = "radio" name = "function" value ="/">/<br>
+	<input type = "number" name = "num2"><br>
+	<input type = "submit" value ="enter">
+	<input type = "hidden" name = "firstname" value = "<%=firstname%>">
+	<input type = "hidden" name = "lastname" value = "<%=lastname%>">
+</center>
+
+
+</form>
