@@ -11,7 +11,8 @@ post '/login' do
 	password = params[:password]
 	correct_login.each_pair do |user, value|
 		if username == user.to_s && password == value
-			redirect '/test_page'
+			message = "successful login"
+			redirect '/names?message=' + message
 		elsif username == user.to_s
 			message = "incorrect password"
 			redirect '/?message=' + message
@@ -24,6 +25,19 @@ post '/login' do
 		redirect '/?message=' + message			
 end
 
-get '/test_page' do
-	erb :test_page
+
+get '/names' do
+	message = params[:message]
+	erb :name, locals:{message:message}
+end
+
+post '/names' do
+	lastname = params[:lastname]
+	firstname = params[:firstname]
+	redirect '/calculator?firstname=' + firstname + 'lastname=' + lastname
+end
+
+get '/calculator' do
+	"test"
+
 end
