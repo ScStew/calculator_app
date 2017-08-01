@@ -7,10 +7,14 @@ erb :login, locals:{message:message}
 end
 
 post '/login' do
-	correct_login = {scstew: "12345", smstew: "woo", arkusb: "hoo"}
+	correct_login = {'scstew' =>  "12345", smstew: "woo", arkusb: "hoo"}
 	username = params[:username]
 	password = params[:password]
 	correct_login.each_pair do |user, value|
+		p user
+		p value
+		# "#{username} username is here"
+		# "#{value} hash key is here"
 		if username == user.to_s && password == value
 			message = "successful login"
 			redirect '/names?message=' + message
@@ -22,11 +26,17 @@ post '/login' do
 			redirect '/?message=' + message
 		end
 	end
-		message = "incorrect username and password"
-		redirect '/?message=' + message			
+		 message = "incorrect username and password"
+		 redirect '/?message=' + message			
 end
 
+get '/thiswontwork' do
+	"this doesn't work buddy"
+end
 
+get '/play' do
+	"yeah this doesnt work either"
+end
 get '/names' do
 	message = params[:message]
 	erb :name, locals:{message:message}

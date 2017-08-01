@@ -1,0 +1,25 @@
+.color{
+color: blue;
+}
+
+.font{
+	font-size: 15vh;
+	
+}
+ul{
+	text-align: center;
+}
+
+li{
+	display: inline;
+	margin-right: 3vh;
+}
+
+.center{
+	text-align: center
+}
+
+body{
+	background-image: url("../images/background_image.jpeg");
+	background: no-repeat;
+}
