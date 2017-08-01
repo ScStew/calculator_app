@@ -30,12 +30,8 @@ post '/login' do
 		 redirect '/?message=' + message			
 end
 
-get '/thiswontwork' do
-	"this doesn't work buddy"
-end
-
 get '/play' do
-	"yeah this doesnt work either"
+	"Nope doesn't work"
 end
 get '/names' do
 	message = params[:message]
