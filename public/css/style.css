@@ -3,10 +3,9 @@ color: black;
 }
 
 .font{
-	font-size: 15vh;
-	
+	font-size: 15vh;	
 }
-ul {
+ul{
 	font-size:25px;
 	border-style:groove;
 	border-width:medium;
@@ -26,6 +25,11 @@ li{
 
 }
 
+.name{
+	font-size: 10vh;
+	text-align: center;
+}
+
 .center{
 	text-align: center
 }
@@ -41,3 +45,4 @@ body{
 footer{
 	text-align:center;
 }
+
